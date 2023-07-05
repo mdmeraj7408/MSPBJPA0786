@@ -59,8 +59,25 @@ public class SpringBootJpaApplication {
 	 */
 /*repository.deleteAll(all);*/
 
-	all.forEach(user->{System.out.println(user);});
-	
+//	all.forEach(user->{System.out.println(user);});
+	/*
+	 * long count = repository.count(); System.out.println(count);
+	 */
+	/*
+	 * List<User> name = repository.findByNameAndCity("ankit","Lucknow");
+	 * name.forEach(e->System.out.println(e));
+	 */
+	/* JPQL Query
+	 * List<User> user = repository.getAllUser();
+	 * user.forEach(e->{System.out.println(user); });
+	 
+	List<User> id = repository.getUserById(1,"Lucknow");
+	id.forEach(e->
+	{System.out.println(e);});
+	*/
+	repository.getUsers().forEach(e->{
+		System.out.println(e);
+	});
+	}
 	}
 
-}
